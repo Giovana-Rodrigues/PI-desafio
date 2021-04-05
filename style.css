@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 'LOCAL' da logo */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO em si */
+header .logo {
+  position: relative;
+  font-size: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* MENU inicio */
+header .container li {
+  list-style: none;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+header .container li a {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+/* MENU fim */
+
+
+/* IMAGEM DE FUNDO */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Mín altura da tela (vai fazer a imagem ficar certinha */
+  padding: 0 100px;
+  background: url(Boa\ noite!.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* TITULO INICIO */
+.banner .content {
+  max-width: 550px;
+}
+/* FRASE TITULO */
+.banner .content h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  color: rgb(136 214 221);
+}
+
+.banner .content h2 span {
+  font-weight: 800;
+}
+
+.banner .content p {
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  color: #fff;
+  margin: 15px 0 35px;
+}
+/*FIM*/
+
+/* PARTE DO TRAILER */
+.play {
+  position: relative;
+  display: inline-block;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+}
+/* IMG DO TRAILER */
+.play img {
+  margin-right: 10px;
+  max-width: 50px;
+}
+
+/* LOGOS INICIO */
+.sci {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  right: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  text-decoration: none;
+}
+
+.sci li a img {
+  filter: invert(
+    1
+  ); /* Como a aimagem é preta para inventer ela pra branca usasse o filter */
+  transform: scale(0.6); /* Tamanho da imagem (escala) */
+}
+/* FIM */
+
+/* IMAGEM ALEATORIA QUE FICA SE MEXENDO */
+.slide {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 250px / 2);
+  width: 250px;
+  height: 150px;
+  background: url(vidrin.png);
+  background-size: cover;
+  cursor: pointer;
+  animation: animate 25s linear infinite;
+}
+
+/* PARTE DA ANIMAÇÃO */
+@keyframes animate {
+  0%,
+  100% {
+    background-position: top;
+  }
+  45%,
+  55% {
+    background-position: bottom;
+  }
+}
+/* FIMMMMM */
+
+/* TRAILER INICIO */
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.95);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trailer.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trailer video {
+  max-width: 700px;
+  outline: none;
+}
+
+.trailer .close {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  cursor: pointer;
+  filter: invert(1);
+  max-width: 32px;
+}
+/* TRAILER FIM */
+
+
+/* ************************ SECTION ABOUT ******************** */ 
+
+/* FUNDO */
+.main {
+  background-color: #131313;
+  padding: 10rem 0;
+}
+/* CONTAINER DOS ELEMENTOS */
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 90%;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+
+/* PARTE DO TEXTO INICIO */
+.main__content {
+  color: #fff;
+  width: 100%;
+}
+/* TITULO */
+.main__content h1 {
+  font-size: 2rem;
+  color: #fa9b4f;
+}
+/* SUBTITULO */
+.main__content h2 {
+  font-size: 4rem;
+  color: #70f9ff
+}
+/* DESCRIÇÃO */
+.main__content p {
+  margin-top: 5px;
+  font-size: 30px;
+  font-weight: 700;
+}
+/* PARTE DO TEXTO FIM */
+
+/* BOTÃO */
+.main__btn {
+  font-size: 1.8rem;
+  background: #95d6f1;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 20px 60px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+
+/* COR DA LETRA NO BOTÃO */
+.main__btn a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* EFEITO QUANDO PASSA O MAUSE NO BOTÃO INICIO */
+.main__btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fa9b4f;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main__btn:hover {
+  color: #fff;
+}
+
+.main__btn:hover:after {
+  width: 100%;
+}
+/* EFEITO QUANDO PASSA O MAUSE NO BOTÃO FIM */
+
+
+/* IMG DO LADO DO TEXTO */
+.main__img--container {
+  text-align: center;
+}
+
+/* ALINHAMENTO DA IMG */
+.main__img--card {
+  margin: 10px;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+
+

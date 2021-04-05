@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arkos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+      <body>
+
+        <header>
+          <a href="#" class="logo">ARKOS</a>
+          <div class="container">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Produto</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+        </header>
+
+        <div class="banner">
+          <div class="content">
+            <h2>The <span>SKY</span> is the limit!</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem non commodi provident ducimus? Laborum amet facere
+              soluta veritatis. Quasi quidem libero nisi pariatur necessitatibus
+              fuga alias laboriosam excepturi laudantium veritatis?
+            </p>
+            <a href="#" class="play" onclick="toggle();"
+              ><img src="play.png" alt="" />Watch Trailer</a
+            >
+            <div class="slide"></div>
+            <ul class="sci">
+              <li>
+                <a href="#"><img src="facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="twitter.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="instagram.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="trailer">
+          <video src="trailer.mp4" controls="true"></video>
+          <img src="close.png" class="close" onclick="toggle();" />
+        </div>
+
+        <!-- ------------------------------- ABOUT SECTION ------------------------------------- -->
+        <div class="main" id="about">
+          <div class="main__container">
+            <div class="main__img--container">
+              <div class="main__img--card">
+             <img src="nonsense.png" alt="">
+              </div>
+            </div>
+            <div class="main__content">
+              <h1>Sobre nossa empresa</h1>
+              <h2>Somos uma plataforma de desenhos 3D</h2>
+              <p>Somos uma intituição que visa ampliar os horizontes dos desenhos 3D com a intenção de mostrar ao mundo os varios desenhos</p>
+              <button class="main__btn"><a href="#">Veja alguns!</a></button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- FUNÇÃO PARA CHAMAR O TRAILER -->
+        <script type="text/javascript">
+          function toggle() {
+            var trailer = document.querySelector(".trailer");
+            var video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime = 0;
+            video.pause();
+
+            // The querySelector() method only returns the first element that matches the specified selectors.
+            // classList = > This property is useful to add, remove and toggle CSS classes on an element.
+          }
+        </script>
+
+      </body>
+    </html>
+ 
